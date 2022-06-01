@@ -9,6 +9,9 @@ class SharedPrefs (private var context: Context) {
         private const val PREF = "MyAppPrefName"
         private const val PREF_TOKEN = "token"
         private const val Locale = "Locale"
+        private const val Name = "Name"
+        private const val Address = "Address"
+
     }
 
 
@@ -19,6 +22,20 @@ class SharedPrefs (private var context: Context) {
     }
     fun getLocale() : String {
         return getLocaleValue(Locale, String::class.java)
+    }
+
+    fun saveUsername(name: String){
+        put(Name, name)
+    }
+    fun getUsername() : String {
+        return get(Name, String::class.java)
+    }
+
+    fun saveAddress(address: String){
+        put(Address, address)
+    }
+    fun getAddress() : String {
+        return get(Address, String::class.java)
     }
 
 

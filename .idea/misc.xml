@@ -3,14 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GrandGallery/app/src/main/res/drawable/drawable_corener_gray.xml" value="0.1555" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/activity_base.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/activity_gallery_grand.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_base.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_show_photo.xml" value="0.19010416666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_user_photos.xml" value="0.19010416666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/layout_custom_loading.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/layout_image_user_albums.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/layout_item_albums.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/provider_paths.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/xml/provider_paths.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

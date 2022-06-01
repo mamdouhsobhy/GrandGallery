@@ -10,6 +10,6 @@ object Nav {
 
     object Albums {
         const val ALBUM_ID = "ALBUM_ID"
-
+        const val URL = "URL"
     }
 }

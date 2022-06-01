@@ -4,8 +4,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.grandgallery.core.presentation.base.BaseResult
 import com.example.grandgallery.gallerygrand.data.responseremote.getalbums.ModelGetAlbumsResponseRemote
+import com.example.grandgallery.gallerygrand.data.responseremote.getalbums.ModelGetAlbumsResponseRemoteItem
 import com.example.grandgallery.gallerygrand.data.responseremote.getusers.ModelGetUsersResponseRemote
+import com.example.grandgallery.gallerygrand.data.responseremote.getusers.ModelGetUsersResponseRemoteItem
 import com.example.grandgallery.gallerygrand.domain.interactor.ProfileUseCase
+import com.example.grandgallery.gallerygrand.domain.interactor.RoomLocalUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -14,7 +17,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ProfileViewModel
-@Inject constructor(private val profileUseCase: ProfileUseCase) : ViewModel() {
+@Inject constructor(private val profileUseCase: ProfileUseCase,private val roomLocalUseCase: RoomLocalUseCase) : ViewModel() {
     private val _profileState =
         MutableStateFlow<ProfileGetUserState>(ProfileGetUserState.Init)
     val profileState: StateFlow<ProfileGetUserState> get() = _profileState
@@ -113,9 +116,15 @@ class ProfileViewModel
                 }
         }
 
+
     }
 
-
+    suspend fun insertAlbum(albumResponse: List<ModelGetAlbumsResponseRemoteItem>) {
+        roomLocalUseCase.insertAlbum(albumResponse)
+    }
+    suspend fun getAlbumLocal(){
+        _albumsState.value=ProfileAlbumUserState.Successlocal(roomLocalUseCase.invokeAlbum())
+    }
     sealed class ProfileGetUserState {
         object Init : ProfileGetUserState()
         data class IsLoading(val isLoading: Boolean) : ProfileGetUserState()
@@ -124,7 +133,6 @@ class ProfileViewModel
 
         data class Success(val modelGetUser: ModelGetUsersResponseRemote?) :
             ProfileGetUserState()
-
         data class ErrorLogin(val errorCode: Int, val errorMessage: String) : ProfileGetUserState()
     }
 
@@ -136,7 +144,8 @@ class ProfileViewModel
 
         data class Success(val modelGetUserAlbum: ModelGetAlbumsResponseRemote) :
             ProfileAlbumUserState()
-
+        data class Successlocal(val model: List<ModelGetAlbumsResponseRemoteItem>) :
+            ProfileAlbumUserState()
         data class ErrorLogin(val errorCode: Int, val errorMessage: String) : ProfileAlbumUserState()
     }
 }

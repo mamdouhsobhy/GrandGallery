@@ -10,19 +10,15 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-
+        maven { url "https://www.jitpack.io" }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.2.2"
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.41'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30'
         classpath "com.google.dagger:hilt-android-gradle-plugin:$dagger_hilt_version"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.4.2"
 
     }
-}
-
-allprojects {
-
 }
 
 

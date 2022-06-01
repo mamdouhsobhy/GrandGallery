@@ -6,5 +6,7 @@
     <string name="username">User Name :</string>
     <string name="user_address">User Address :</string>
     <string name="my_albums">My Albums</string>
+    <string name="search">Search...</string>
+    <string name="share">Share</string>
 
 </resources>

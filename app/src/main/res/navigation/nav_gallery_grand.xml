@@ -12,11 +12,20 @@
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/userPhotosFragment"
-        android:name="com.example.grandgallery.gallerygrand.presentation.fragment.UserPhotosFragment"
+        android:name="com.example.grandgallery.gallerygrand.presentation.fragment.fragmentphoto.UserPhotosFragment"
         android:label="fragment_user_photos"
         tools:layout="@layout/fragment_user_photos">
         <argument
-        android:name="Album_id"
+        android:name="ALBUM_ID"
         app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/showPhotoFragment"
+        android:name="com.example.grandgallery.gallerygrand.presentation.fragment.fragmentshow.ShowPhotoFragment"
+        android:label="fragment_show_photo"
+        tools:layout="@layout/fragment_show_photo" >
+        <argument
+            android:name="URL"
+            app:argType="string" />
     </fragment>
 </navigation>

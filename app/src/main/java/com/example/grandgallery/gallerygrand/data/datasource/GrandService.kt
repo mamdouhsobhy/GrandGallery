@@ -2,6 +2,7 @@ package com.example.grandgallery.gallerygrand.data.datasource
 
 import com.example.grandgallery.core.data.utils.WrappedResponse
 import com.example.grandgallery.gallerygrand.data.responseremote.getalbums.ModelGetAlbumsResponseRemote
+import com.example.grandgallery.gallerygrand.data.responseremote.getphotos.ModelGetPhotosResponseRemote
 import com.example.grandgallery.gallerygrand.data.responseremote.getusers.ModelGetUsersResponseRemote
 import retrofit2.Response
 import retrofit2.http.*
@@ -12,10 +13,14 @@ interface GrandService {
     @GET("users")
     suspend fun getUsers(): Response<ModelGetUsersResponseRemote>
 
-
     @GET("albums")
     suspend fun getUserAlbums(
         @Query("userId") userId: Int
     ): Response<ModelGetAlbumsResponseRemote>
+
+    @GET("photos")
+    suspend fun getUserPhoto(
+        @Query("albumId") albumId: String
+    ): Response<ModelGetPhotosResponseRemote>
 
 }
