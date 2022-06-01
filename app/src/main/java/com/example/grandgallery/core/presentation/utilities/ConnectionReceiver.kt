@@ -1,25 +1,22 @@
-package com.example.grandgallery.core.presentation.utilities;
+package com.example.grandgallery.core.presentation.utilities
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
+import com.example.grandgallery.core.presentation.utilities.ConnectionReceiver
+import com.example.grandgallery.core.presentation.utilities.ConnectionReceiver.ReceiverListener
 
-public class ConnectionReceiver extends BroadcastReceiver {
-
-    // initialize listener
-    public static ReceiverListener Listener;
-
-    @Override
-    public void onReceive(Context context, Intent intent) {
+class ConnectionReceiver : BroadcastReceiver() {
+    override fun onReceive(context: Context, intent: Intent) {
 
         // initialize connectivity manager
-        ConnectivityManager connectivityManager = (ConnectivityManager)
-                context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        val connectivityManager =
+            context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
         // Initialize network info
-        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        val networkInfo = connectivityManager.activeNetworkInfo
 
         // check condition
         if (Listener != null) {
@@ -27,18 +24,20 @@ public class ConnectionReceiver extends BroadcastReceiver {
             // when connectivity receiver
             // listener  not null
             // get connection status
-            boolean isConnected = networkInfo != null && networkInfo.isConnectedOrConnecting();
+            val isConnected = networkInfo != null && networkInfo.isConnectedOrConnecting
 
             // call listener method
-            Listener.onNetworkChange(isConnected);
+            Listener!!.onNetworkChange(isConnected)
         }
     }
 
-    public interface ReceiverListener {
+    interface ReceiverListener {
         // create method
-        void onNetworkChange(boolean isConnected);
+        fun onNetworkChange(isConnected: Boolean)
     }
 
-
-
+    companion object {
+        // initialize listener
+        var Listener: ReceiverListener? = null
+    }
 }
