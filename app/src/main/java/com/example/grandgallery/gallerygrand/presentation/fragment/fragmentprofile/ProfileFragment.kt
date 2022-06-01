@@ -172,8 +172,9 @@ class ProfileFragment : BaseFragmentBinding<FragmentProfileBinding>() {
         sharedPrefs.saveAddress(address)
     }
 
+    @SuppressLint("SetTextI18n")
     private fun getLocalUser() {
-        binding.tvUserName.text = sharedPrefs.getUsername()
+        binding.tvUserName.text =getString(R.string.username)+sharedPrefs.getUsername()
         binding.tvUserAddress.text = sharedPrefs.getAddress()
     }
 }
