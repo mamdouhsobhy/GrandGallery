@@ -5,10 +5,11 @@ import okhttp3.Interceptor
 import okhttp3.Response
 
 class RequestInterceptor constructor(private val pref: SharedPrefs) : Interceptor {
+    var token=pref.getToken()
     override fun intercept(chain: Interceptor.Chain): Response {
         val newRequest = chain.request().newBuilder()
             .addHeader("Accept", "application/json")
-            //.addHeader("Authorization", "Bearer $token")
+            .addHeader("Authorization", "Bearer $token")
             .build()
         return chain.proceed(newRequest)
     }

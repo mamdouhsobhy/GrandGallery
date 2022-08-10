@@ -6,11 +6,18 @@ import android.content.SharedPreferences
 @Suppress("UNCHECKED_CAST")
 class SharedPrefs (private var context: Context) {
     companion object {
-        private const val PREF = "MyAppPrefName"
-        private const val PREF_TOKEN = "token"
-        private const val Locale = "Locale"
         private const val Name = "Name"
         private const val Address = "Address"
+        private const val PREF = "MyAppPrefName"
+        private const val PREF_TOKEN = "user_token"
+        private const val USER_ID = "user_id"
+        private const val USER_ROLE = "user_role"
+        private const val IS_SELECTED = "IS_SELECTED"
+        private const val USER_NAME = "USER_NAME"
+        private const val Locale = "Locale"
+        private const val Location = "Location"
+        private const val TYPE = "TYPE"
+        private const val NotFound = "NotFound"
 
     }
 
@@ -24,18 +31,68 @@ class SharedPrefs (private var context: Context) {
         return getLocaleValue(Locale, String::class.java)
     }
 
-    fun saveUsername(name: String){
-        put(Name, name)
-    }
-    fun getUsername() : String {
-        return get(Name, String::class.java)
+    fun saveToken(token: String){
+        put(PREF_TOKEN, token)
     }
 
-    fun saveAddress(address: String){
-        put(Address, address)
+    fun getToken() : String {
+        return get(PREF_TOKEN, String::class.java)
     }
-    fun getAddress() : String {
-        return get(Address, String::class.java)
+
+    fun saveFound(found: String){
+        put(NotFound, found)
+    }
+
+    fun getFound() : String {
+        return get(NotFound, String::class.java)
+    }
+
+    fun saveType(token: String){
+        put(TYPE, token)
+    }
+
+    fun getType() : String {
+        return get(TYPE, String::class.java)
+    }
+
+    fun saveName(name: String){
+        put(USER_NAME, name)
+    }
+
+    fun getName() : String {
+        return get(USER_NAME, String::class.java)
+    }
+
+    fun saveLocation(name: String){
+        put(Location, name)
+    }
+
+    fun getLocation() : String {
+        return get(Location, String::class.java)
+    }
+
+    fun saveSelect(selected: String){
+        put(IS_SELECTED, selected)
+    }
+
+    fun getSelect() : String {
+        return get(IS_SELECTED, String::class.java)
+    }
+
+    fun saveID(id: String){
+        put(USER_ID, id)
+    }
+
+    fun getID() : String {
+        return get(USER_ID, String::class.java)
+    }
+
+    fun saveUserRole(userRole: String){
+        put(USER_ROLE, userRole)
+    }
+
+    fun getUserRole() : String {
+        return get(USER_ROLE, String::class.java)
     }
 
 

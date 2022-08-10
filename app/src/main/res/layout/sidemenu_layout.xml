@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_220sdp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/menucolor">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleY="1.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/cob"
+                android:layout_width="@dimen/_235sdp"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/coveredbackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imgPerson"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/greenprofileuser"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:fontFamily="@font/robotobold"
+                android:text="Mamdouh Sobhy"
+                android:textColor="@color/txtfayrouz"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgPerson"
+                tools:ignore="HardcodedText"
+
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtInfoNourRahman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/robotobold"
+            android:padding="10dp"
+            android:text="معلومات عن جمعية نور الرحمات"
+            android:textAlignment="center"
+            android:textColor="@color/txtfayrouz"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/con"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/viewOne"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/txtfayrouz"
+            app:layout_constraintTop_toBottomOf="@+id/txtInfoNourRahman" />
+
+        <TextView
+            android:id="@+id/txtInfoTamra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/robotobold"
+            android:padding="10dp"
+            android:text="معلومات عن شق تمرة"
+            android:textAlignment="center"
+            android:textColor="@color/txtfayrouz"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewOne"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/viewTwo"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="visible"
+            android:layout_marginTop="15dp"
+            android:background="@color/txtfayrouz"
+            app:layout_constraintTop_toBottomOf="@+id/txtInfoTamra" />
+
+        <TextView
+            android:id="@+id/txtActiveTamra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/robotobold"
+            android:padding="10dp"
+            android:visibility="visible"
+            android:text="إنشاء منشور"
+            android:textAlignment="center"
+            android:textColor="@color/txtfayrouz"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewTwo"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/viewThree"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/txtfayrouz"
+            app:layout_constraintTop_toBottomOf="@+id/txtActiveTamra" />
+
+        <TextView
+            android:id="@+id/txtContactUs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/robotobold"
+            android:padding="10dp"
+            android:text="حسابات المستخدمين"
+            android:textAlignment="center"
+            android:textColor="@color/txtfayrouz"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewThree"
+            tools:ignore="HardcodedText" />
+
+        <View
+            android:id="@+id/viewFour"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            android:background="@color/txtfayrouz"
+            app:layout_constraintTop_toBottomOf="@+id/txtContactUs" />
+
+        <TextView
+            android:id="@+id/txtSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/robotobold"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="الإعدادات"
+            android:visibility="gone"
+            android:textAlignment="center"
+            android:textColor="@color/txtfayrouz"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewFour"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:fontFamily="@font/robotobold"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="الإعدادات"
+            android:textAlignment="center"
+            android:textColor="@color/txtfayrouz"
+            android:textSize="@dimen/_15sdp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSetting"
+            tools:ignore="HardcodedText" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

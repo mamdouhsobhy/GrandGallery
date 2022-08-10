@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home_donor"
+    app:startDestination="@id/homeDonorFragment">
+
+    <fragment
+        android:id="@+id/homeDonorFragment"
+        android:name="com.example.grandgallery.homedonor.presentation.home.HomeDonorFragment"
+        android:label="fragment_home_donor"
+        tools:layout="@layout/fragment_home_donor" />
+
+
+    <fragment
+        android:id="@+id/fragmentCharityInfo"
+        android:name="com.example.grandgallery.sidemenu.charityinfo.FragmentCharityInfo"
+        android:label="FragmentCharityInfo" />
+
+    <fragment
+        android:id="@+id/fragmentTamraInfo"
+        android:name="com.example.grandgallery.sidemenu.tamrainfo.FragmentTamraInfo"
+        android:label="FragmentTamraInfo" />
+    <fragment
+        android:id="@+id/fragmentTamraActivites"
+        android:name="com.example.grandgallery.sidemenu.tamraactivites.FragmentTamraActivites"
+        android:label="fragment_tamra_activites"
+        tools:layout="@layout/fragment_tamra_activites" />
+    <fragment
+        android:id="@+id/fragmentChat"
+        android:name="com.example.grandgallery.homedonor.chat.FragmentChat"
+        android:label="FragmentChat" />
+    <fragment
+        android:id="@+id/fragmentSelectType"
+        android:name="com.example.grandgallery.sidemenu.selecttype.FragmentSelectType"
+        android:label="FragmentSelectType" />
+    <fragment
+        android:id="@+id/fragmentTalabat"
+        android:name="com.example.grandgallery.sidemenu.talabat.FragmentTalabat"
+        android:label="FragmentTalabat" >
+        <argument
+            android:name="type"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAddPost"
+        android:name="com.example.grandgallery.sidemenu.addpost.FragmentAddPost"
+        android:label="FragmentAddPost" />
+
+</navigation>

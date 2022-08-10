@@ -82,6 +82,6 @@ class UserPhotosViewModel
         data class Success(val modelGetUserPhoto: ModelGetPhotosResponseRemote) :
             UserPhotoState()
 
-        data class ErrorLogin(val errorCode: Int, val errorMessage: String) : UserPhotoState()
+        data class ErrorLogin(val errorCode: String, val errorMessage: String) : UserPhotoState()
     }
 }

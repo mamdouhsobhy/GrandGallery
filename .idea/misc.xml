@@ -3,18 +3,41 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GrandGallery/app/src/main/res/drawable-hdpi/select_donation.xml" value="0.139" />
+        <entry key="..\:/GrandGallery/app/src/main/res/drawable-mdpi/drawable_corner_btn.xml" value="0.139" />
+        <entry key="..\:/GrandGallery/app/src/main/res/drawable-mdpi/drawable_corner_edittext.xml" value="0.139" />
+        <entry key="..\:/GrandGallery/app/src/main/res/drawable-mdpi/rectangle_border_green.xml" value="0.139" />
+        <entry key="..\:/GrandGallery/app/src/main/res/drawable-mdpi/select_home.xml" value="0.139" />
+        <entry key="..\:/GrandGallery/app/src/main/res/drawable-mdpi/sendbutton.xml" value="0.139" />
         <entry key="..\:/GrandGallery/app/src/main/res/drawable/drawable_corener_gray.xml" value="0.1555" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/activity_auth.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/activity_base.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/activity_gallery_grand.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/activity_home_donor.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_add_post.xml" value="0.2" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_base.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_charity_info.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_chat.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_home_donor.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_login.xml" value="0.2" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_profile.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_select_type.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_show_photo.xml" value="0.19010416666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_talabat.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_tamra_activites.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_tamra_info.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/fragment_user_photos.xml" value="0.19010416666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/item_posts.xml" value="0.25" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/item_show_order.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/layout_comments.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/layout_custom_loading.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/layout_image_user_albums.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/layout_item_albums.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/layout/provider_paths.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/layout/sidemenu_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/GrandGallery/app/src/main/res/menu/main_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/GrandGallery/app/src/main/res/xml/provider_paths.xml" value="0.20416666666666666" />
       </map>
     </option>

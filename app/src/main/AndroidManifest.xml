@@ -11,15 +11,17 @@
     <application
         android:name=".baseclass.GrandGalleryApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.GrandGallery">
         <activity
-            android:name=".gallerygrand.presentation.GalleryGrandActivity"
-            android:exported="true" >
+            android:name=".splash.SplashActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +29,20 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".homedonor.ActivityHomeDonor"
+            android:exported="false" />
+        <activity
+            android:name=".gallerygrand.presentation.GalleryGrandActivity"
+            android:exported="true" >
+        </activity>
+        <activity
             android:name=".MainActivity"
+            android:exported="true">
+
+        </activity>
+
+        <activity
+            android:name=".authorize.presentation.ActivityAuth"
             android:exported="true">
 
         </activity>

@@ -82,7 +82,7 @@ class UserPhotosFragment : BaseFragmentBinding<FragmentUserPhotosBinding>() {
     }
 
 
-    private fun handleErrorLogin(errorCode: Int, errorMessage: String) {
+    private fun handleErrorLogin(errorCode: String, errorMessage: String) {
         requireActivity().showGenericAlertDialog(errorMessage)
     }
 

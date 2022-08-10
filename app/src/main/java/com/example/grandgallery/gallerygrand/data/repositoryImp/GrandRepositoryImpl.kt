@@ -28,7 +28,7 @@ class GrandRepositoryImpl @Inject constructor(private val grandService: GrandSer
                 val type = object : TypeToken<ModelGetUsersResponseRemote>() {}.type
                 val err: WrappedResponse<ModelGetUsersResponseRemote> =
                     Gson().fromJson(response.errorBody()!!.charStream(), type)
-                err.code = response.code()
+                err.code = response.code().toString()
                 emit(BaseResult.ErrorState(err.code, err.error))
             }
         }
@@ -47,7 +47,7 @@ class GrandRepositoryImpl @Inject constructor(private val grandService: GrandSer
                 val type = object : TypeToken<ModelGetUsersResponseRemote>() {}.type
                 val err: WrappedResponse<ModelGetUsersResponseRemote> =
                     Gson().fromJson(response.errorBody()!!.charStream(), type)
-                err.code = response.code()
+                err.code = response.code().toString()
                 emit(BaseResult.ErrorState(err.code, err.error))
             }
         }
@@ -66,7 +66,7 @@ class GrandRepositoryImpl @Inject constructor(private val grandService: GrandSer
                 val type = object : TypeToken<ModelGetPhotosResponseRemote>() {}.type
                 val err: WrappedResponse<ModelGetPhotosResponseRemote> =
                     Gson().fromJson(response.errorBody()!!.charStream(), type)
-                err.code = response.code()
+                err.code = response.code().toString()
                 emit(BaseResult.ErrorState(err.code, err.error))
             }
         }

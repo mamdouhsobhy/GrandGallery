@@ -100,7 +100,7 @@ class ProfileFragment : BaseFragmentBinding<FragmentProfileBinding>() {
     }
 
 
-    private fun handleErrorLogin(errorCode: Int, errorMessage: String) {
+    private fun handleErrorLogin(errorCode: String, errorMessage: String) {
         requireActivity().showGenericAlertDialog(errorMessage)
     }
 
@@ -168,13 +168,13 @@ class ProfileFragment : BaseFragmentBinding<FragmentProfileBinding>() {
                 modelGetUser?.get(0)?.address?.city + " /" +
                 modelGetUser?.get(0)?.address?.street + " /" +
                 modelGetUser?.get(0)?.address?.zipcode
-        modelGetUser?.get(0)?.username?.let { sharedPrefs.saveUsername(it) }
-        sharedPrefs.saveAddress(address)
+//        modelGetUser?.get(0)?.username?.let { sharedPrefs.saveUsername(it) }
+//        sharedPrefs.saveAddress(address)
     }
 
     @SuppressLint("SetTextI18n")
     private fun getLocalUser() {
-        binding.tvUserName.text =getString(R.string.username)+sharedPrefs.getUsername()
-        binding.tvUserAddress.text = sharedPrefs.getAddress()
+//        binding.tvUserName.text =getString(R.string.username)+sharedPrefs.getUsername()
+//        binding.tvUserAddress.text = sharedPrefs.getAddress()
     }
 }

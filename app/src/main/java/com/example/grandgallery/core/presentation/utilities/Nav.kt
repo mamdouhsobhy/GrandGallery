@@ -12,4 +12,8 @@ object Nav {
         const val ALBUM_ID = "ALBUM_ID"
         const val URL = "URL"
     }
+    object Type {
+        const val type = "type"
+
+    }
 }

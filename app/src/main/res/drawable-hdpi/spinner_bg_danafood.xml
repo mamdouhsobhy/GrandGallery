@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#25008080" />
+                    <stroke android:width="0.5dp" android:color="@color/fayroze"
+                        android:dashWidth="0dp" android:dashGap="2dp" />
+                    <corners android:radius="10dp" />
+                    <padding android:left="16dp" android:right="16dp" />
+                </shape>
+            </item>
+
+            <item>
+                <bitmap android:gravity="end"
+                    android:src="@drawable/spinner" />
+            </item>
+
+            <item>
+                <bitmap android:gravity="start"
+                    android:src="@drawable/danateoffood" />
+
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

@@ -133,7 +133,7 @@ class ProfileViewModel
 
         data class Success(val modelGetUser: ModelGetUsersResponseRemote?) :
             ProfileGetUserState()
-        data class ErrorLogin(val errorCode: Int, val errorMessage: String) : ProfileGetUserState()
+        data class ErrorLogin(val errorCode: String, val errorMessage: String) : ProfileGetUserState()
     }
 
     sealed class ProfileAlbumUserState {
@@ -146,6 +146,6 @@ class ProfileViewModel
             ProfileAlbumUserState()
         data class Successlocal(val model: List<ModelGetAlbumsResponseRemoteItem>) :
             ProfileAlbumUserState()
-        data class ErrorLogin(val errorCode: Int, val errorMessage: String) : ProfileAlbumUserState()
+        data class ErrorLogin(val errorCode: String, val errorMessage: String) : ProfileAlbumUserState()
     }
 }

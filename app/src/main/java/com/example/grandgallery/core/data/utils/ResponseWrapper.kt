@@ -11,9 +11,11 @@ data class WrappedListResponse<T> (
 )
 
 data class WrappedResponse<T> (
-    var code: Int,
-    @SerializedName("status") var status : StatusBase,
+    @SerializedName("state") val state: Boolean,
+    @SerializedName("code") var code: String,
+    @SerializedName("message")  val message: String,
     @SerializedName("error") var error : String,
+    @SerializedName("kind") var kind : String,
     @SerializedName("data") var data : T? = null
 )
 
